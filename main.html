@@ -45,7 +45,7 @@
           </div>
           <div class="mb-3 col-4">
             <label class="form-label" for="email-input"
-              >Email</label
+              >Email Address</label
             >
             <input
               type="email"
@@ -67,21 +67,21 @@
       </div>
 			</div>
 			<div class="mb-3 col-4">
-				<label class="form-label" for="graduationYear">Graduation Year</label>
-				<input class="form-control" list="datalistOptions" id="graduationYear" placeholder="Choose.." required>
-<datalist id="datalistOptions">
-  <option value="2020">
-  <option value="2021">
-  <option value="2022">
-  <option value="2023">
-</datalist>
+				<label class="form-label" for="grad-year-select">Graduation Year</label>
+				<select class="form-select" id="grad-year-select" required>
+      <option selected >Choose...</option>
+      <option>2020</option>
+	<option>2021</option>
+	<option>2022</option>
+	<option>2023</option>
+    </select>
 				<div class="invalid-feedback">
         Please select a valid Graduation Year.
       </div>
 			</div>
 			<div class="mb-3 col-4">
 				<label class="form-label" for="roll-no-input">Roll No.</label>
-				<input type="number" class="form-control" id="roll-no-input" required>
+				<input type="text" class="form-control" id="roll-no-input" required>
 				<div class="invalid-feedback">
         Please provide a valid Roll no.
       </div>
