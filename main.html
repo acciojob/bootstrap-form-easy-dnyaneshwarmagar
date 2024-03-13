@@ -16,42 +16,89 @@
 	<!-- the entire body must be written by student -->
 	 <div class="container">
 	<p class="display-5 text-center">Internship Form</p>
-          <form>
+          <form class="needs-validation" novalidate>
         <div class="row">
-          <div class="mb-3 col-3">
+          <div class="mb-3 col-4">
             <label for="first-name-input" class="form-label"
-              ></label
+              >First Name</label
             >
             <input
               type="text"
               class="form-control"
-              id="first-name-input"
-             
-            />
-         
+              id="first-name-input" required />
+	         <div class="invalid-feedback">
+        First name required.
+      </div>
           </div>
-          <div class="mb-3 col-3">
+          <div class="mb-3 col-4">
             <label for="last-name-input" class="form-label"
-              >Password</label
+              >Last Name</label
             >
             <input
               type="text"
               class="form-control"
-              id="last-name-input"
+              id="last-name-input" required
             />
+			  <div class="invalid-feedback">
+        Last name required.
+      </div>
           </div>
-          <div class="mb-3 form-check">
+          <div class="mb-3 col-4">
             <label class="form-label" for="email-input"
               >Email</label
             >
             <input
               type="email"
               class="form-control"
-              id="email-input"
+              id="email-input" placeholder="xyz@abc.com" required
             />
+			  <div class="invalid-feedback">
+        Email required.
+      </div>
           </div>
 
         </div>
+		<div class="row">
+			<div class="mb-3 col-4">
+				<label class="form-label" for="college-input">College</label>
+				<input type="text" class="form-control" id="college-input" required>
+				<div class="invalid-feedback">
+        Please provide a valid college.
+      </div>
+			</div>
+			<div class="mb-3 col-4">
+				<label class="form-label" for="graduationYear">Graduation Year</label>
+				<input class="form-control" list="datalistOptions" id="graduationYear" placeholder="Choose.." required>
+<datalist id="datalistOptions">
+  <option value="2020">
+  <option value="2021">
+  <option value="2022">
+  <option value="2023">
+</datalist>
+				<div class="invalid-feedback">
+        Please select a valid Graduation Year.
+      </div>
+			</div>
+			<div class="mb-3 col-4">
+				<label class="form-label" for="roll-no-input">Roll No.</label>
+				<input type="number" class="form-control" id="roll-no-input" required>
+				<div class="invalid-feedback">
+        Please provide a valid Roll no.
+      </div>
+			</div>
+		</div>
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="conditions-checkbox" required>
+        <label class="form-check-label" for="conditions-checkbox">
+          Agree to terms and conditions
+        </label>
+			<div class="invalid-feedback">
+        You must agree before submitting
+      </div>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit Form</button>
+			  
     </form>
       </div>
     <script type="text/javascript" src="./script.js">
